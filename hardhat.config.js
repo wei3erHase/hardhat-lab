@@ -1,6 +1,9 @@
 require('@nomiclabs/hardhat-ethers');
 require('@nomiclabs/hardhat-web3');
 require('dotenv').config();
+require('@typechain/hardhat');
+require('@typechain/hardhat/dist/type-extensions');
+require('tsconfig-paths/register');
 
 module.exports = {
   defaultNetwork: 'hardhat',
@@ -21,6 +24,15 @@ module.exports = {
         enabled: true,
         runs: 200,
       },
+      outputSelection: {
+        '*': {
+          '*': ['storageLayout'],
+        },
+      },
     },
+  },
+  typechain: {
+    outDir: 'typechained',
+    target: 'ethers-v5',
   },
 };

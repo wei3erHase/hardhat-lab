@@ -38,6 +38,7 @@
     "commander": "^6.2.0",
     "rollup": "^2.34.2",
     "semver": "^7.3.4",
+    "tslab-plotly": "^2.0.4",
     "zeromq": "^6.0.0-beta.6"
   },
   "devDependencies": {
