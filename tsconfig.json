@@ -1,12 +1,20 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
+    "target": "es2019",
     "module": "commonjs",
+    "strict": true,
     "esModuleInterop": true,
-    "target": "ES2017",
-    "lib": ["es2017"],
-    "newLine": "LF",
-    "declaration": true
+    "resolveJsonModule": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@typechained": ["typechained/index"],
+      "@utils": ["test/utils/index"],
+      "@utils/*": ["test/utils/*"],
+      "@e2e/*": ["test/e2e/*"],
+      "@unit/*": ["test/unit/*"]
+    }
   },
-  "include": ["src/main.ts", "src/public.ts"]
+  "include": ["./scripts", "./deploy", "./test"],
+  "files": ["./hardhat.config.ts"]
 }

@@ -1,3 +1,11 @@
+# Hardhat
+artifacts
+cache
+typechained
+
+# ETH-SDK
+eth-sdk/abis
+
 # Logs
 logs
 *.log
